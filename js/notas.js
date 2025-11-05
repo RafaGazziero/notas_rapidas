@@ -14,9 +14,14 @@ function adicionarurgente() {
     novanota=document.createElement("li")
     novanota.id="novanota"
     novanota.innerHTML=nota=document.getElementById("nota").value
+    if(nota == ""){
+        alert("Por favor, insira uma nota antes de adicionar.")
+    }
+    else{
     novanota.style.color = proximaCor();
     var div=document.getElementById("urgente")
-    div.appendChild(novanota)
+    div.appendChild(novanota)}
+    document.getElementById("nota").value = ""
 }
 
 function adicionarnaourgente() {
@@ -24,9 +29,14 @@ function adicionarnaourgente() {
     novanota=document.createElement("li")
     novanota.id="novanota2"
     novanota.innerHTML=nota=document.getElementById("nota").value
+    if(nota == ""){
+        alert("Por favor, insira uma nota antes de adicionar.")
+    }
+    else{
     novanota.style.color = proximaCor();
     var div=document.getElementById("naourgente")
-    div.appendChild(novanota)
+    div.appendChild(novanota)}
+    document.getElementById("nota").value = ""
 }
 
 function removerurg()
@@ -63,4 +73,3 @@ function removertudon()
     var li=document.getElementById("naourgente")
     li.innerHTML=""
 }
-
