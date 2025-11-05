@@ -10,7 +10,7 @@ function adicionarurgente() {
 function adicionarnaourgente() {
     var novanota, nota
     novanota=document.createElement("li")
-    novanota.id="novanota"
+    novanota.id="novanota2"
     novanota.innerHTML=nota=document.getElementById("nota").value
     var div=document.getElementById("naourgente")
     div.appendChild(novanota)
@@ -30,7 +30,7 @@ function removerurg()
 }
 function removernurg()
 {
-    var li=document.getElementById("novanota")
+    var li=document.getElementById("novanota2")
     if(li)
     {
         li.remove()
