@@ -1,8 +1,20 @@
+let cores = ["blue", "green", "purple"];
+let indiceCor = 0;
+
+function proximaCor() {
+    const cor = cores[indiceCor];
+    indiceCor = (indiceCor + 1) % cores.length; // ciclo infinito
+    return cor;
+}
+
+novanota.style.color = proximaCor();
+
 function adicionarurgente() {
     var novanota, nota
     novanota=document.createElement("li")
     novanota.id="novanota"
     novanota.innerHTML=nota=document.getElementById("nota").value
+    novanota.style.color = proximaCor();
     var div=document.getElementById("urgente")
     div.appendChild(novanota)
 }
@@ -12,6 +24,7 @@ function adicionarnaourgente() {
     novanota=document.createElement("li")
     novanota.id="novanota2"
     novanota.innerHTML=nota=document.getElementById("nota").value
+    novanota.style.color = proximaCor();
     var div=document.getElementById("naourgente")
     div.appendChild(novanota)
 }
@@ -50,3 +63,4 @@ function removertudon()
     var li=document.getElementById("naourgente")
     li.innerHTML=""
 }
+
